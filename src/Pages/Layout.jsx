@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useEffect } from "react";
 
 const themes = [
@@ -14,25 +14,9 @@ const themes = [
   "CyberPunk",
 ];
 
-function RootPage({
-  name,
-  setName,
-  simp,
-  setSimp,
-  wpTheme,
-  setWpTheme,
-  wp,
-  setWP,
-}) {
-  useEffect(() => {
-    const simpsonsURL = "https://thesimpsonsquoteapi.glitch.me/quotes";
-    fetch(simpsonsURL)
-      .then((response) => response.json())
-      .then((data) => setSimp(data[0]));
-  }, []);
-
+function LayoutPage({ wpTheme, setWpTheme, wp, setWP }) {
   const fetchWP = () => {
-    const WPURL = `https://api.unsplash.com/photos/random?client_id=GdUVswihOUZQbPBprLpHirAHvbdsxnrRq_98puNbwCs&orientation=landscape&query=${wpTheme}`;
+    const WPURL = `https://api.unsplash.com/photos/random?client_id=GdUVswihOUZQbPBprLpHirAHvbdsxnrRq_98puNbwCs&orientation=portrait&query=${wpTheme}`;
     console.log(WPURL);
 
     fetch(WPURL)
@@ -72,50 +56,25 @@ function RootPage({
     fetchWP();
   };
 
-  const handleName = (e) => {
-    setName(e.target.value);
-    console.log(name);
-  };
-
   return (
     <div
-      className='flex flex-col justify-center items-center'
+      className='hero w-full'
       style={{
         backgroundImage: `url(${wp})`,
         backgroundSize: "cover",
-        width: "1200px",
+        width: "1500px",
         height: "1000px",
       }}>
-      <h2>This is the root page</h2>
-      <div className='flex flex-col justify-center items-center'>
-        <h2 style={{ backgroundColor: "white" }}>{simp.quote}</h2>
-        <h4 style={{ backgroundColor: "white" }}>{simp.character}</h4>
-        <img
-          className='flex flex-col justify-center items-center'
-          src={simp.image}
-          style={{ height: "200px" }}
-        />
+      <div className='hero-overlay bg-opacity-40'></div>
+      <div className='text-center text-neutral-content h-screen w-10xl'>
+        <div className='max-w-7xl'>
+          <Outlet />
+          <br />
+        </div>
       </div>
-      <br />
-      <h1 className='text-3xl font-bold' style={{ backgroundColor: "white" }}>
-        Hello,
-      </h1>
-      <input
-        type='text'
-        placeholder='Enter your name here'
-        className='input input-bordered input-secondary w-full max-w-xs'
-        onChange={handleName}
-      />
-      <h2>
-        <button className='btn btn-warning'>
-          {" "}
-          <Link to='/home'>Let's Get Started</Link>
-        </button>
-      </h2>
-      <br />
-      <div className='dropdown dropdown-top'>
-        <label tabindex='0' className='btn m-1'>
-          What Would You Like To See Today?
+      <div className='dropdown dropdown-top absolute bottom-0 '>
+        <label tabindex='0' className='btn glass absolute bottom-0 sticky'>
+          Change my environment
         </label>
         <ul
           tabindex='0'
@@ -150,4 +109,4 @@ function RootPage({
   );
 }
 
-export default RootPage;
+export default LayoutPage;
