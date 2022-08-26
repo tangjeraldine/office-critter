@@ -2,10 +2,10 @@ import PersonalInfoModal from "./PersonalInfoModal";
 
 function GetInTouch() {
   return (
-    <div>
+    <div className='max-w-3xl relative left-60'>
       <div class='text-center lg:text-left'>
         <h1 class='text-2xl font-mono '>
-          Love coffee too? Get in touch with me and we can grab a mug!
+          Love coffee too? <br /> Get in touch with me and we can grab a mug!
         </h1>
       </div>
       <br />
@@ -31,7 +31,7 @@ function GetInTouch() {
           />
         </div>
         <div class='basis-1/2 md:basis-1/3'>
-          <button class='btn btn-primary'>Submit</button>
+          <button class='btn btn-outline btn-success'>Submit</button>
         </div>
 
         <PersonalInfoModal />

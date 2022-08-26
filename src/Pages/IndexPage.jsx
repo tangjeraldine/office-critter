@@ -90,8 +90,8 @@ function RootPage({
           className='input input-bordered input-secondary w-full max-w-xs'
           onChange={handleName}
         />
-        <p class='mb-5 text-2xl'>We know how busy your day is.</p>
-        <p class='mb-5 text-2xl'>We're here to help you focus.</p>
+        <p className='mb-5 text-2xl'>We know how busy your day is.</p>
+        <p className='mb-5 text-2xl'>We're here to help you focus.</p>
         <h2>
           <button className='btn btn-secondary'>
             {" "}

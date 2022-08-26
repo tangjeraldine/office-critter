@@ -16,7 +16,7 @@ const defaultWP =
 
 function App() {
   const [simp, setSimp] = useState("");
-  const [name, setName] = useState(""); //might change to useContext to pass on both name and Wallpaper to other pages
+  const [name, setName] = useState("Anonymous"); //might change to useContext to pass on both name and Wallpaper to other pages
   const [wpTheme, setWpTheme] = useState("");
   const [wp, setWP] = useState(defaultWP);
 

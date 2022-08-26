@@ -5,6 +5,7 @@ function TasksPage() {
     <div className='h-5/6'>
       <NavBar />
       <br />
+      <h1>"You don't find purpose. You create it."</h1>
       <textarea
         class='textarea textarea-primary'
         placeholder='Bio'></textarea>{" "}

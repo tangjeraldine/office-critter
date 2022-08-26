@@ -21,7 +21,7 @@ function LayoutPage({ wpTheme, setWpTheme, wp, setWP }) {
 
     fetch(WPURL)
       .then((response) => response.json())
-      .then((data) => setWP(data?.urls?.full));
+      .then((data) => setWP(data?.urls?.raw));
   };
   const handlePlants = () => {
     setWpTheme("plant");
