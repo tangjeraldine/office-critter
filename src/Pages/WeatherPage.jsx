@@ -23,10 +23,12 @@ function WeatherPage() {
   // console.log(typeof temp);
 
   return (
-    <div>
+    <div className='text-emerald-900'>
       <NavBar />
       <br />
-      <h2 className='mb-8 text-3xl font-bold '>This is the Weather Page</h2>
+      <h2 className='mb-8 text-3xl text-white font-bold '>
+        This is the Weather Page
+      </h2>
       <div className='carousel max-w-7xl'>
         <div id='item1' className='carousel-item w-full'>
           <TemperatureD1 temp={temp} />
@@ -63,6 +65,8 @@ function WeatherPage() {
           Search Overseas.
         </a>
       </div>
+      <br />
+
       <OverseasButtons
         favArray={favArray}
         setFavArray={setFavArray}

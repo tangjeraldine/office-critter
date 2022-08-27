@@ -16,7 +16,7 @@ const themes = [
 
 function LayoutPage({ wpTheme, setWpTheme, wp, setWP }) {
   const fetchWP = () => {
-    const WPURL = `https://api.unsplash.com/photos/random?client_id=GdUVswihOUZQbPBprLpHirAHvbdsxnrRq_98puNbwCs&orientation=portrait&query=${wpTheme}`;
+    const WPURL = `https://api.unsplash.com/photos/random?client_id=GdUVswihOUZQbPBprLpHirAHvbdsxnrRq_98puNbwCs&orientation=landscape&query=${wpTheme}`;
     console.log(WPURL);
 
     fetch(WPURL)

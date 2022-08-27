@@ -1,17 +1,21 @@
 function OverseasButtons({ favArray, setFavArray, country, temp, overseasW }) {
-  const handleRemove = () => {
-    console.log(typeof country);
-    console.log(typeof favArray);
-    favArray.includes(country)
-      ? setFavArray(favArray.filter((array) => array !== country))
-      : console.log("don't remove");
+  // const handleRemove = () => {
+  //   console.log(typeof country);
+  //   console.log(typeof favArray);
+  //   favArray.includes(country)
+  //     ? setFavArray(favArray.filter((array) => array !== country))
+  //     : console.log("don't remove");
+  // };
+
+  const handleRemove = (index) => () => {
+    setFavArray((buttons) => buttons.filter((_, i) => i !== index));
   };
 
   return (
-    <div>
-      {favArray.map((place) => (
+    <div className='grid grid-cols-4 gap-2'>
+      {favArray.map((place, index) => (
         <div>
-          <label for='my-modal' class='btn modal-button glass'>
+          <label for='my-modal' class='btn modal-button btn-primary'>
             {place}
           </label>
           <input type='checkbox' id='my-modal' class='modal-toggle' />
@@ -28,7 +32,7 @@ function OverseasButtons({ favArray, setFavArray, country, temp, overseasW }) {
                 The humidity there is now {overseasW?.main?.humidity}%.
               </div>
               <div class='modal-action'>
-                <button class='btn gap-2' onClick={handleRemove}>
+                <button class='btn gap-2' onClick={handleRemove(index)}>
                   Remove from Favs
                 </button>{" "}
                 <label for='my-modal' class='btn btn-success'>
