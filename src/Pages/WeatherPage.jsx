@@ -52,16 +52,16 @@ function WeatherPage() {
         </div>
       </div>
       <div className='flex justify-center w-full py-2 gap-2'>
-        <a href='#item1' className='btn btn-xs'>
+        <a href='#item1' className='btn btn-s'>
           Today.
         </a>
-        <a href='#item2' className='btn btn-xs'>
+        <a href='#item2' className='btn btn-s'>
           Tomorrow.
         </a>
-        <a href='#item3' className='btn btn-xs'>
+        <a href='#item3' className='btn btn-s'>
           The Day After.
         </a>
-        <a href='#item4' className='btn btn-xs'>
+        <a href='#item4' className='btn btn-s'>
           Search Overseas.
         </a>
       </div>

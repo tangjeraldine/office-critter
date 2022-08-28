@@ -3,17 +3,6 @@
 import { Link, Outlet } from "react-router-dom";
 import { useEffect } from "react";
 
-const themes = [
-  "Plants",
-  "Urban",
-  "Home",
-  "Food",
-  "City",
-  "Vacation",
-  "Minimalism",
-  "CyberPunk",
-];
-
 function LayoutPage({ wpTheme, setWpTheme, wp, setWP }) {
   const fetchWP = () => {
     const WPURL = `https://api.unsplash.com/photos/random?client_id=GdUVswihOUZQbPBprLpHirAHvbdsxnrRq_98puNbwCs&orientation=landscape&query=${wpTheme}`;

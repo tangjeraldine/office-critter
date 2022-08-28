@@ -2,6 +2,8 @@
 
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import ClockComponent from "./ClockComponent";
+import DateComponent from "./DateComponent";
 
 const themes = [
   "Plants",
@@ -78,28 +80,42 @@ function RootPage({
   };
 
   return (
-    <div className='text-center text-neutral-content max-w-4xl'>
-      <div className='max-w-max'>
-        <h2 className='mb-8 text-3xl font-bold '>"{simp.quote}"</h2>{" "}
-        <img src={simp.image} className='max-h-44 ' />
-        <h4 className='mb-5 text-2xl font-bold'>{simp.character}</h4>
-        <h1 className='mb-7 text-5xl font-bold'>Hello,</h1>
-        <input
-          type='text'
-          placeholder='Enter your name here'
-          className='input input-bordered input-secondary w-full max-w-xs'
-          onChange={handleName}
-        />
-        <p className='mb-5 text-2xl'>We know how busy your day is.</p>
-        <p className='mb-5 text-2xl'>We're here to help you focus.</p>
-        <h2>
-          <button className='btn btn-secondary'>
-            {" "}
-            <Link to='/home'>Let's Get Started</Link>
-          </button>
-        </h2>
+    <div className='text-center text-neutral-content max-w-4xl text-white'>
+      <div className='max-w-max space-y-10'>
         <br />
+        <div className='mb-8 text-7xl space-y-10'>
+          <ClockComponent />
+          <DateComponent />
+        </div>{" "}
+        <div>
+          <img src={simp.image} className='max-h-44 float-left space-y-10' />
+          <h2 className='mb-8 text-2xl font-mono space-y-10'>
+            "{simp.quote}"
+          </h2>{" "}
+          <h4 className='mb-5 text-2xl font-mono space-y-10'>
+            - {simp.character}
+          </h4>
+        </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <h1 className='mb-7 text-5xl font-bold'>Hello,</h1>
+      <input
+        type='text'
+        placeholder='Enter your name here'
+        className='input input-bordered input-secondary w-full max-w-xs'
+        onChange={handleName}
+      />
+      <p className='mb-5 text-2xl'>We know how busy your day is.</p>
+      <p className='mb-5 text-2xl'>We're here to help you focus.</p>
+      <h2>
+        <button className='btn btn-secondary'>
+          {" "}
+          <Link to='/home'>Let's Get Started</Link>
+        </button>
+      </h2>
+      <br />
     </div>
   );
 }

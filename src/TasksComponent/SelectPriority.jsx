@@ -20,7 +20,7 @@ function SelectPriority({
   const handleText = (e) => {
     setText(e.target.value);
   };
-  console.log(typeof text);
+  // console.log(typeof text);
 
   const handleHighest = () => {
     setHighest([...highest, text]);
@@ -58,7 +58,7 @@ function SelectPriority({
       <textarea
         onChange={handleText}
         className='textarea textarea-info text-teal-700 text-2xl font-serif'
-        placeholder='Describe what to do and when.'></textarea>
+        placeholder='State what and when...'></textarea>
 
       <div className='dropdown dropdown-top '>
         <label
