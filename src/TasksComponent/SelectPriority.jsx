@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import ProductivityStats from "./ProductivityStats";
+// import ProductivityStats from "./ProductivityStats";
+
 function SelectPriority({
   count,
   setCount,
@@ -13,10 +16,11 @@ function SelectPriority({
   setFourth,
   text,
   setText,
+  highestDone,
+  secondDone,
+  thirdDone,
+  fourthDone,
 }) {
-  const [prodMsg, setProdMsg] = useState([]);
-  const [on, setOn] = useState("on");
-
   const handleText = (e) => {
     setText(e.target.value);
   };
@@ -42,17 +46,6 @@ function SelectPriority({
     setFourth([...fourth, text]);
     setCount(count + 1);
   };
-  const message = `You have a total of ${count} pending tasks. ${highest.length} of them are high priority.`;
-  const handleMsg = () => {
-    prodMsg.includes(message)
-      ? setProdMsg(prodMsg.filter((msg) => msg !== message))
-      : setProdMsg([...prodMsg, message]);
-    if (on === "on") {
-      setOn("off");
-    } else {
-      setOn("on");
-    }
-  };
 
   return (
     <div className='grid grid-cols-2 gap-4'>
@@ -64,7 +57,7 @@ function SelectPriority({
       <div className='dropdown dropdown-top '>
         <label
           tabindex='0'
-          class='btn btn-active btn-primary m-3 float-center w-full'>
+          class='btn btn-active btn-black m-3 float-center w-full'>
           Pick Priority
         </label>
         <ul
@@ -84,10 +77,17 @@ function SelectPriority({
           </li>
         </ul>
       </div>
-      <button onClick={handleMsg} class='btn btn-glass btn-block text-1xl'>
-        Turn {on} Productivity Mode.
-      </button>
-      <p className='text-2xl'>{prodMsg}</p>
+      <ProductivityStats
+        highest={highest}
+        second={second}
+        third={third}
+        fourth={fourth}
+        count={count}
+        highestDone={highestDone}
+        secondDone={secondDone}
+        thirdDone={thirdDone}
+        fourthDone={fourthDone}
+      />
     </div>
   );
 }

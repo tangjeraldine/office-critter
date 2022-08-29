@@ -33,7 +33,7 @@ function GetInTouch() {
           />
         </div>
         <div className='basis-1/2 md:basis-1/3'>
-          <button className='btn btn-outline btn-success'>Submit</button>
+          <button className='btn  btn-black'>Submit</button>
         </div>
 
         <PersonalInfoModal />

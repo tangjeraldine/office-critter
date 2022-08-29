@@ -1,6 +1,7 @@
-function ImptNotUrgent({ second, setSecond }) {
+function ImptNotUrgent({ second, setSecond, secondDone, setSecondDone }) {
   const handleRemove = (index) => () => {
     setSecond((tasks) => tasks.filter((_, i) => i !== index));
+    setSecondDone(secondDone + 1);
   };
   const secondPriorityList = second.map((item, index) => (
     <div class='card w-60 bg-primary text-primary-content'>

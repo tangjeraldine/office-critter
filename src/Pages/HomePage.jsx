@@ -20,7 +20,7 @@ function HomePage({ name, wp }) {
       <p className='mb-9 text-2xl space-y-10'>
         Start your day with a coffee, or one of the following.
       </p>
-      <ul className='menu menu-horizontal bg-secondary rounded-box p-6 '>
+      <ul className='menu menu-horizontal bg-black rounded-box p-6 '>
         <li>
           <Link to='/tasks'>Today's Tasks?</Link>
         </li>
@@ -30,23 +30,10 @@ function HomePage({ name, wp }) {
         <li>
           <Link to='/weather'>#Skies.</Link>
         </li>
-
-        <li tabindex='0'>
-          <span>All About $.</span>
-          <ul className='rounded-box bg-base-100 p-2'>
-            <li>
-              <Link to='/currency'>Currency Conversion</Link>
-            </li>
-            <li>
-              <Link to='/stocks'>Most Active Stocks</Link>
-            </li>
-          </ul>
-        </li>
         <li>
           <Link to='/entertainment'>Brain Fart!</Link>
         </li>
       </ul>
-      {/* <button class='btn btn-primary'>Get Started</button> */}
     </div>
   );
 }

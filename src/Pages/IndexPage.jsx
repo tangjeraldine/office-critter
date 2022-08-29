@@ -104,13 +104,13 @@ function RootPage({
       <input
         type='text'
         placeholder='Enter your name here'
-        className='input input-bordered input-secondary w-full max-w-xs'
+        className='input input-bordered input-secondary w-full max-w-xs text-black text-2xl'
         onChange={handleName}
       />
-      <p className='mb-5 text-2xl'>We know how busy your day is.</p>
-      <p className='mb-5 text-2xl'>We're here to help you focus.</p>
+      <br />
+      <h2 className='mb-5 text-3xl'>We're here to help you focus.</h2>
       <h2>
-        <button className='btn btn-secondary'>
+        <button className='btn btn-black text-white'>
           {" "}
           <Link to='/home'>Let's Get Started</Link>
         </button>

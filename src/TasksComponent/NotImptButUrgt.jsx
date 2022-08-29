@@ -1,6 +1,7 @@
-function NotImptButUrgt({ third, setThird }) {
+function NotImptButUrgt({ third, setThird, thirdDone, setThirdDone }) {
   const handleRemove = (index) => () => {
     setThird((tasks) => tasks.filter((_, i) => i !== index));
+    setThirdDone(thirdDone + 1);
   };
 
   const thirdPriorityList = third.map((item, index) => (

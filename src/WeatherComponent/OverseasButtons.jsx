@@ -15,7 +15,7 @@ function OverseasButtons({ favArray, setFavArray, country, temp, overseasW }) {
     <div className='grid grid-cols-4 gap-2'>
       {favArray.map((place, index) => (
         <div>
-          <label for='my-modal' class='btn modal-button btn-primary'>
+          <label for='my-modal' class='btn modal-button btn-black'>
             {place}
           </label>
           <input type='checkbox' id='my-modal' class='modal-toggle' />

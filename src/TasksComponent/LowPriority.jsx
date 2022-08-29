@@ -1,6 +1,7 @@
-function LowPriority({ fourth, setFourth }) {
+function LowPriority({ fourth, setFourth, fourthDone, setFourthDone }) {
   const handleRemove = (index) => () => {
     setFourth((tasks) => tasks.filter((_, i) => i !== index));
+    setFourthDone(fourthDone + 1);
   };
   const fourthPriorityList = fourth.map((item, index) => (
     <div class='card w-60 bg-primary text-primary-content'>

@@ -18,7 +18,7 @@ function EntertainmentPage({
     <div>
       <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
       <br />
-      <h3 className='mb-5 text-3xl font-bold text-black'>
+      <h3 className='mb-5 text-3xl font-bold text-emerald-900 bg-white '>
         Entertainment that's totally SFW. ;){" "}
       </h3>
       <br />

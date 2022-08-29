@@ -1,6 +1,7 @@
-function HighPriority({ highest, setHighest }) {
+function HighPriority({ highest, setHighest, highestDone, setHighestDone }) {
   const handleRemove = (index) => () => {
     setHighest((tasks) => tasks.filter((_, i) => i !== index));
+    setHighestDone(highestDone + 1);
   };
 
   const highPriorityList = highest.map((item, index) => (

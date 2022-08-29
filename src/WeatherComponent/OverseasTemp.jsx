@@ -40,13 +40,13 @@ function OverseasTemp({
           <div className='text-3xl font-bold font-serif'>
             Interested to know what other parts of the world feels like at this
             moment? <br />
-            {/* enter search query box */}
+            <br />
             <form>
               {" "}
               <input
                 type='text'
-                placeholder='Enter city name here'
-                class='input input-bordered input-success w-full max-w-xs font-mono'
+                placeholder='Enter city or country name here'
+                class='input input-bordered input-success w-full max-w-xs font-mono text-2xl'
                 onChange={handleCountry}
               />
               {/* modal dialogue box containing queried info to appear */}
