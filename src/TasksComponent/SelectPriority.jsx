@@ -25,6 +25,7 @@ function SelectPriority({
   const handleHighest = () => {
     setHighest([...highest, text]);
     setCount(count + 1);
+    // console.log(highest);
   };
 
   const handleSecond = () => {

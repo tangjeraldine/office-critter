@@ -2,7 +2,49 @@ import { Link } from "react-router-dom";
 import ClockComponent from "./ClockComponent";
 import DateComponent from "./DateComponent";
 
-function NavBar() {
+function NavBar({ wpTheme, setWpTheme, wp, setWP }) {
+  const fetchWP = () => {
+    const WPURL = `https://api.unsplash.com/photos/random?client_id=GdUVswihOUZQbPBprLpHirAHvbdsxnrRq_98puNbwCs&orientation=landscape&query=${wpTheme}`;
+    console.log(WPURL);
+
+    fetch(WPURL)
+      .then((response) => response.json())
+      .then((data) => setWP(data?.urls?.raw));
+  };
+
+  const handlePlants = () => {
+    setWpTheme("plant");
+    fetchWP();
+  };
+  const handleUrban = () => {
+    setWpTheme("urban");
+    fetchWP();
+  };
+  const handleHome = () => {
+    setWpTheme("home");
+    fetchWP();
+  };
+  const handleFood = () => {
+    setWpTheme("food");
+    fetchWP();
+  };
+  const handleCity = () => {
+    setWpTheme("city");
+    fetchWP();
+  };
+  const handleVacation = () => {
+    setWpTheme("vacation");
+    fetchWP();
+  };
+  const handleMinimalism = () => {
+    setWpTheme("minimalist");
+    fetchWP();
+  };
+  const handleCP = () => {
+    setWpTheme("cyberpunk");
+    fetchWP();
+  };
+
   return (
     <div className='absolute top-0 sticky font-serif text-1xl text-emerald-900'>
       <div class='navbar bg-base-100'>
@@ -11,11 +53,11 @@ function NavBar() {
             {" "}
             <img
               src='https://cdn-icons-png.flaticon.com/512/1584/1584961.png'
-              className='h-14'
+              className='h-12'
             />
           </Link>
-          <ClockComponent className='text-1xl' />
           <DateComponent className='text-1xl' />
+          (<ClockComponent className='text-1xl ' />)
         </div>
         <div class='navbar-center hidden lg:flex'>
           <ul class='menu menu-horizontal p-0'>
@@ -46,10 +88,28 @@ function NavBar() {
               </a>
               <ul class='p-2'>
                 <li>
-                  <Link to='/currency'>Currency Conversion</Link>
+                  <a onClick={handlePlants}>Plants</a>
                 </li>
                 <li>
-                  <Link to='/stocks'>Most Active Stocks</Link>
+                  <a onClick={handleUrban}>Urban</a>
+                </li>
+                <li>
+                  <a onClick={handleHome}>Home</a>
+                </li>
+                <li>
+                  <a onClick={handleFood}>Food</a>
+                </li>
+                <li>
+                  <a onClick={handleCity}>City</a>
+                </li>
+                <li>
+                  <a onClick={handleVacation}>Vacation</a>
+                </li>
+                <li>
+                  <a onClick={handleMinimalism}>Minimalism</a>
+                </li>
+                <li>
+                  <a onClick={handleCP}>CyberPunk</a>
                 </li>
               </ul>
             </li>

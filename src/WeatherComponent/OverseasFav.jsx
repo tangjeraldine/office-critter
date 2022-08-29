@@ -1,17 +1,12 @@
 import { useState } from "react";
 
 function OverseasFav({ overseasW, country, favArray, setFavArray }) {
-  const [changeButton, setChangeButton] = useState("");
   const handleLike = () => {
     if (favArray.includes(country)) {
-      setChangeButton("disabled");
     } else {
       setFavArray([...favArray, country]);
-      setChangeButton(""); //! and setChangeButton doesnt change back
     }
   };
-  console.log(country); //! how come country doesnt change anymore?
-  console.log(favArray);
 
   return (
     <div>
@@ -25,7 +20,10 @@ function OverseasFav({ overseasW, country, favArray, setFavArray }) {
       <div className='text-2xl mb-5 font-serif'>
         The humidity there is now {overseasW?.main?.humidity}%.
       </div>
-      <button class='btn gap-2' disabled={changeButton} onClick={handleLike}>
+      <button
+        class='btn gap-2'
+        disabled={favArray.includes(country)}
+        onClick={handleLike}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           class='h-6 w-6'

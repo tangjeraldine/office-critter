@@ -7,7 +7,7 @@ import HowToText from "../AboutComponent/HowTo";
 import AboutText from "../AboutComponent/Text";
 import NavBar from "./NavBar";
 
-function AboutPage() {
+function AboutPage({ wpTheme, setWpTheme, wp, setWP }) {
   const [aboutPic, setAboutPic] = useState("");
 
   useEffect(() => {
@@ -19,8 +19,8 @@ function AboutPage() {
   }, []);
 
   return (
-    <div>
-      <NavBar />
+    <div className='text-white'>
+      <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
       <br />
       <div>
         <img className='mask mask-parallelogram' src={aboutPic?.urls?.small} />

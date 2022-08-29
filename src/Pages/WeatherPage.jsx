@@ -7,7 +7,7 @@ import OverseasTemp from "../WeatherComponent/OverseasTemp";
 import OverseasFav from "../WeatherComponent/OverseasFav";
 import OverseasButtons from "../WeatherComponent/OverseasButtons";
 
-function WeatherPage() {
+function WeatherPage({ wpTheme, setWpTheme, wp, setWP }) {
   const [temp, setTemp] = useState({});
   const [country, setCountry] = useState("");
   const [favArray, setFavArray] = useState([]);
@@ -24,7 +24,7 @@ function WeatherPage() {
 
   return (
     <div className='text-emerald-900'>
-      <NavBar />
+      <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
       <br />
       <h2 className='mb-8 text-3xl text-white font-bold '>
         This is the Weather Page

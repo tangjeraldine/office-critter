@@ -18,6 +18,12 @@ function App() {
   const [name, setName] = useState("O' Mysterious One"); //might change to useContext to pass on both name and Wallpaper to other pages
   const [wpTheme, setWpTheme] = useState("");
   const [wp, setWP] = useState(defaultWP);
+  const [highest, setHighest] = useState([]);
+  const [second, setSecond] = useState([]);
+  const [third, setThird] = useState([]);
+  const [fourth, setFourth] = useState([]);
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
 
   return (
     <BrowserRouter>
@@ -45,11 +51,86 @@ function App() {
                 />
               }
             />
-            <Route path='/home' element={<HomePage name={name} wp={wp} />} />
-            <Route path='/tasks' element={<TasksPage />} />
-            <Route path='/guide' element={<AboutPage />} />
-            <Route path='/weather' element={<WeatherPage />} />
-            <Route path='/entertainment' element={<EntertainmentPage />} />
+            <Route
+              path='/home'
+              element={
+                <HomePage
+                  name={name}
+                  wpTheme={wpTheme}
+                  setWpTheme={setWpTheme}
+                  wp={wp}
+                  setWP={setWP}
+                />
+              }
+            />
+            <Route
+              path='/tasks'
+              element={
+                <TasksPage
+                  wpTheme={wpTheme}
+                  setWpTheme={setWpTheme}
+                  wp={wp}
+                  setWP={setWP}
+                  count={count}
+                  setCount={setCount}
+                  highest={highest}
+                  setHighest={setHighest}
+                  second={second}
+                  setSecond={setSecond}
+                  third={third}
+                  setThird={setThird}
+                  fourth={fourth}
+                  setFourth={setFourth}
+                  text={text}
+                  setText={setText}
+                />
+              }
+            />
+            <Route
+              path='/guide'
+              element={
+                <AboutPage
+                  wpTheme={wpTheme}
+                  setWpTheme={setWpTheme}
+                  wp={wp}
+                  setWP={setWP}
+                />
+              }
+            />
+            <Route
+              path='/weather'
+              element={
+                <WeatherPage
+                  wpTheme={wpTheme}
+                  setWpTheme={setWpTheme}
+                  wp={wp}
+                  setWP={setWP}
+                />
+              }
+            />
+            <Route
+              path='/entertainment'
+              element={
+                <EntertainmentPage
+                  wpTheme={wpTheme}
+                  setWpTheme={setWpTheme}
+                  wp={wp}
+                  setWP={setWP}
+                  count={count}
+                  setCount={setCount}
+                  highest={highest}
+                  setHighest={setHighest}
+                  second={second}
+                  setSecond={setSecond}
+                  third={third}
+                  setThird={setThird}
+                  fourth={fourth}
+                  setFourth={setFourth}
+                  text={text}
+                  setText={setText}
+                />
+              }
+            />
           </Route>
         </Route>
       </Routes>

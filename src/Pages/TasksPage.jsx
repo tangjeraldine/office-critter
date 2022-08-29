@@ -6,19 +6,29 @@ import NotImptButUrgt from "../TasksComponent/NotImptButUrgt";
 import SelectPriority from "../TasksComponent/SelectPriority";
 import NavBar from "./NavBar";
 
-function TasksPage() {
-  const [highest, setHighest] = useState([]);
-  const [second, setSecond] = useState([]);
-  const [third, setThird] = useState([]);
-  const [fourth, setFourth] = useState([]);
-  const [count, setCount] = useState(0);
-  const [text, setText] = useState("");
-
+function TasksPage({
+  wpTheme,
+  setWpTheme,
+  wp,
+  setWP,
+  count,
+  setCount,
+  highest,
+  setHighest,
+  second,
+  setSecond,
+  third,
+  setThird,
+  fourth,
+  setFourth,
+  text,
+  setText,
+}) {
   return (
-    <div className='max-w-7xl'>
-      <NavBar />
+    <div className='max-w-8xl'>
+      <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
       <br />
-      <h1 className='mb-5 text-4xl font-bold bg-blue-100 text-black'>
+      <h1 className='mb-5 text-3xl font-bold bg-blue-100 text-black'>
         "Discipline is choosing between what you want now, and what you want
         most."
       </h1>

@@ -1,6 +1,6 @@
 function PersonalInfoModal() {
   return (
-    <div>
+    <div className='text-black'>
       <label for='my-modal-4'>What will your information be used for?</label>
 
       <input type='checkbox' id='my-modal-4' class='modal-toggle' />
