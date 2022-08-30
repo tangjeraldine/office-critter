@@ -4,7 +4,7 @@ function NumTrivia() {
   const [trivia, setTrivia] = useState("");
   const fetchTrivia = () => {
     const triviaURL = "http://numbersapi.com/random/trivia";
-    fetch(triviaURL)
+    fetch(triviaURL, { mode: "cors" })
       .then((response) => response.text())
       .then((text) => setTrivia(text));
     console.log(trivia);

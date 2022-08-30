@@ -1,7 +1,4 @@
-import { useState } from "react";
-
 import ProductivityStats from "./ProductivityStats";
-// import ProductivityStats from "./ProductivityStats";
 
 function SelectPriority({
   count,

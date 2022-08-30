@@ -1,9 +1,23 @@
-// import { DoughNutChart } from "./Doughnut";
 import React from "react";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Radar } from "react-chartjs-2";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend
+);
 
 function ProductivityStats({
   highest,
@@ -17,55 +31,77 @@ function ProductivityStats({
   fourthDone,
 }) {
   const hLength = highest.length;
-  const hDone = hLength - highestDone.length;
   const sLength = second.length;
   const tLength = third.length;
   const fLength = fourth.length;
+
+  const totalDone = highestDone + secondDone + thirdDone + fourthDone;
+
   const data = {
-    labels: [
-      "High Priority",
-      "Important",
-      "Urgent",
-      "Low Priority",
-      "Completed Tasks",
-      "Orange",
-    ],
+    labels: ["High Priority", "Important", "Urgent", "Low Priority"],
     datasets: [
       {
-        label: "# of Votes",
-        data: [hLength, sLength, tLength, fLength, 2, 3],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(255, 159, 64, 0.2)",
-        ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(153, 102, 255, 1)",
-          "rgba(255, 159, 64, 1)",
-        ],
-        borderWidth: 2,
+        label: "Completed",
+        data: [highestDone, secondDone, thirdDone, fourthDone],
+        backgroundColor: "rgba(157, 177, 223, 0.8)", //light blue
+        borderColor: "rgba(0, 71, 229, 0.8)", //blue
+      },
+      {
+        label: "Total No. of Tasks",
+        data: [hLength, sLength, tLength, fLength],
+        backgroundColor: "rgba(250, 204, 204, 0.8)", //pink
+        borderColor: "rgba(202, 0, 0, 0.8)", //red
       },
     ],
   };
 
-  const totalDone = highestDone + secondDone + thirdDone + fourthDone;
+  const options = {
+    elements: {
+      line: {
+        borderWidth: 3,
+      },
+    },
+    scales: {
+      r: {
+        angleLines: {
+          display: false,
+        },
+        beginAtZero: true,
+        animate: true,
+        ticks: {
+          stepSize: 1,
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        labels: {
+          // This more specific font property overrides the global property
+          font: {
+            size: 20,
+          },
+        },
+      },
+    },
+  };
+
   return (
     <div>
       <label for='my-modal-4' class='btn modal-button'>
         View Productivity Stats
       </label>
-      <progress class='progress w-56' value={totalDone} max={count}></progress>
+      <progress
+        className='progress w-56'
+        value={totalDone}
+        max={count}></progress>
       <input type='checkbox' id='my-modal-4' class='modal-toggle' />
       <label for='my-modal-4' class='modal cursor-pointer'>
         <label class='modal-box relative' for=''>
-          <Doughnut data={data} />
+          <Radar data={data} options={options} />
+          <p className='text-black'>
+            The gap between your total and completed tasks shows you how much
+            further you have to completing your day's work.
+          </p>
         </label>
       </label>
     </div>

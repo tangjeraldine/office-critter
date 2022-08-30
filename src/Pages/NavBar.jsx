@@ -46,7 +46,7 @@ function NavBar({ wpTheme, setWpTheme, wp, setWP }) {
   };
 
   return (
-    <div className='absolute top-0 sticky font-serif text-1xl text-emerald-900'>
+    <div className='absolute top-0 sticky font-serif text-1xl text-black'>
       <div class='navbar bg-base-100'>
         <div class='navbar-start'>
           <Link to='/' class='btn btn-ghost normal-case text-xl'>
