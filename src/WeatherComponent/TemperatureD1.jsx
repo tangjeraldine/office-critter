@@ -21,8 +21,7 @@ function TemperatureD1({ temp }) {
           <div>
             {" "}
             <div className='text-3xl font-bold font-serif'>
-              Have plans for today? Let's see what the weather has in store for
-              you.
+              Making plans for today? Let's see what the weather's like.
             </div>{" "}
             <br />
             <div className='text-2xl font-serif'>

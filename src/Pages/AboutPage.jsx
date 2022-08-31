@@ -23,7 +23,7 @@ function AboutPage({ wpTheme, setWpTheme, wp, setWP }) {
       <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
       <br />
       <div>
-        <img className='mask mask-parallelogram' src={aboutPic?.urls?.small} />
+        <img className='mask-parallelogram' src={aboutPic?.urls?.small} />
       </div>
       <div class='carousel w-full'>
         <div id='slide1' class='carousel-item relative w-full'>

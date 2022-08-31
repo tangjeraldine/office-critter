@@ -1,7 +1,8 @@
 // import BDTrivia from "../EntertainmentComponent/BirthdayTrivia";
-// import GiveNumberTrivia from "../EntertainmentComponent/GiveNumberTrivia";
+import GiveNumberTrivia from "../EntertainmentComponent/GiveNumberTrivia";
+// import NumTrivia from "../EntertainmentComponent/NumTrivia";
 import NewYorkTimes from "../EntertainmentComponent/NewYorkTimesBestSeller";
-import NumTrivia from "../EntertainmentComponent/NumTrivia";
+import YoutubeVids from "../EntertainmentComponent/YoutubeCarousel";
 import TaskReminder from "../EntertainmentComponent/TaskReminder";
 import NavBar from "./NavBar";
 
@@ -19,25 +20,23 @@ function EntertainmentPage({
     <div>
       <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
       <br />
-      <h3 className='mb-5 text-3xl font-bold text-emerald-900 bg-white rounded-md'>
-        Entertainment that's totally SFW. ;){" "}
-      </h3>
-
-      <div className='grid-cols-4'>
+      <div>
         <TaskReminder
           highest={highest}
           second={second}
           third={third}
           fourth={fourth}
         />
-        <br />
-        <NumTrivia />
+        <div className='grid grid-cols-2 gap-4'>
+          <YoutubeVids />
+          <GiveNumberTrivia />
+        </div>
+
         <div className='divider'></div>
         <h2 className='mb-5 text-2xl font-bold text-white'>
-          What's Trending On The New York Times:
+          Bestsellers Now Trending On The New York Times:
         </h2>
         <NewYorkTimes />
-        <div className='divider'></div>
       </div>
     </div>
   );

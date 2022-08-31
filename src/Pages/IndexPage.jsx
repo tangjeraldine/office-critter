@@ -76,7 +76,7 @@ function RootPage({
 
   const handleName = (e) => {
     setName(e.target.value);
-    console.log(name);
+    // console.log(name);
   };
 
   return (
@@ -101,20 +101,23 @@ function RootPage({
       <br />
       <br />
       <h1 className='mb-7 text-5xl font-bold'>Hello,</h1>
-      <input
-        type='text'
-        placeholder='Enter your name here'
-        className='input input-bordered input-secondary w-full max-w-xs text-black text-2xl'
-        onChange={handleName}
-      />
-      <br />
-      <h2 className='mb-5 text-3xl'>We're here to help you focus.</h2>
-      <h2>
-        <button className='btn btn-black text-white'>
-          {" "}
-          <Link to='/home'>Let's Get Started</Link>
-        </button>
-      </h2>
+      <form action='/home' method='get'>
+        <input
+          type='text'
+          placeholder='Enter your name here'
+          className='input input-bordered input-secondary w-full max-w-xs text-black text-2xl'
+          onChange={handleName}
+        />
+        <br />
+        <h2 className='mb-5 text-3xl'>We're here to help you focus.</h2>
+        <h2>
+          <button className='btn btn-black text-white'>
+            {" "}
+            <Link to='/home'>Let's Get Started</Link>
+          </button>
+        </h2>
+      </form>
+
       <br />
     </div>
   );

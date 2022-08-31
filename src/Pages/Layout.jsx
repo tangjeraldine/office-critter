@@ -1,17 +1,13 @@
 /* eslint-disable */
 
-import { Link, Outlet } from "react-router-dom";
-import { useEffect } from "react";
+import { Outlet } from "react-router-dom";
 
-function LayoutPage({ wpTheme, setWpTheme, wp, setWP }) {
+function LayoutPage({ wp }) {
   return (
     <div
-      className='hero w-full'
+      className='hero w-screen object-fill'
       style={{
         backgroundImage: `url(${wp})`,
-        backgroundSize: "cover",
-        width: "1500px",
-        height: "1200px",
       }}>
       <div className='hero-overlay bg-opacity-40'></div>
       <div className='text-center text-neutral-content h-screen w-10xl'>

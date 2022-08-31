@@ -2,7 +2,7 @@ function PersonalInfoModal() {
   return (
     <div className='text-black'>
       <label className='text-white font-bold' for='my-modal-4'>
-        See: What will your information be used for?
+        See: Confidentiality Policy
       </label>
 
       <input type='checkbox' id='my-modal-4' class='modal-toggle' />

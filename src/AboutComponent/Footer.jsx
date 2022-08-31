@@ -1,15 +1,15 @@
 function AboutFooter() {
   return (
     <div className='w-full '>
-      <footer class='footer items-center p-4 bg-neutral text-neutral-content'>
+      <footer class='footer items-center p-4 bg-white rounded-md text-neutral-content'>
         <div class='items-center grid-flow-col'>
           <img
             src='https://cdn-icons-png.flaticon.com/512/3361/3361135.png'
-            className='h-10'
+            className='h-14'
           />
-          <p>
-            Created by Jeraldine @ GA. Powered by JavaScript and React Vite.{" "}
-            <br />© 2022 - All rights reserved.
+          <p className='text-black font-serif'>
+            Created by Jeraldine @ GA. Powered by React. <br />© 2022 - All
+            rights reserved.
           </p>
         </div>
         <div class='grid-flow-col gap-4 md:place-self-center md:justify-self-end'>

@@ -50,27 +50,25 @@ function SelectPriority({
         <textarea
           onChange={handleText}
           className='textarea textarea-info text-teal-700 text-2xl font-serif'
-          placeholder='State what and when...'></textarea>
+          placeholder='Add task to begin.'></textarea>
 
-        <div className='dropdown dropdown-top '>
-          <label
-            tabindex='0'
-            class='btn btn-active btn-black m-3 float-center w-full'>
+        <div className='dropdown dropdown-bottom '>
+          <label tabindex='0' class='btn  btn-black m-3 float-center w-full'>
             How important is it?
           </label>
           <ul
             tabindex='0'
-            class='dropdown-content menu shadow p-2 bg-base-100 rounded-box w-80'>
-            <li onClick={handleHighest} className='text-red-700 text-1xl '>
+            class='dropdown-content menu shadow bg-base-100 rounded-box w-80'>
+            <li onClick={handleHighest} className='text-red-700 '>
               <a>Important and Urgent. Don't procrastinate!</a>
             </li>
-            <li onClick={handleSecond} className='text-slate-700 text-1xl'>
+            <li onClick={handleSecond} className='text-slate-700'>
               <a>It's Important, But Make Time For It Later.</a>
             </li>
-            <li onClick={handleThird} className='text-slate-500 text-1xl'>
+            <li onClick={handleThird} className='text-slate-500'>
               <a>Urgent, But... Meh. Delegate/Reschedule?</a>
             </li>
-            <li onClick={handleFourth} className='text-slate-300 text-1xl'>
+            <li onClick={handleFourth} className='text-slate-300 '>
               <a>Can Live Without. Cancel/Ignore?</a>
             </li>
           </ul>

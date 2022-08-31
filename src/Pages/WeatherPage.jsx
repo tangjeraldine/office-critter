@@ -26,7 +26,6 @@ function WeatherPage({ wpTheme, setWpTheme, wp, setWP }) {
     <div className='text-emerald-900 '>
       <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
       <br />
-      <img className='w-screen rounded-md' src='../Clouds_2.jpg' />
       <br />
       <div className='carousel max-w-7xl rounded-md'>
         <div id='item1' className='carousel-item w-full'>

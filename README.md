@@ -53,26 +53,37 @@ This section will cover the salient functionalities of Office Critter.
 
 **Start** 
 
+![Introduction](/Media/StartIntro.gif "Introduction Page")
+
 *insert gifs videos of interface
 In Office Critter, I decided against using local storage to save individual profiles (which sounds great and I'm sure that's what some people prefer to experience) because the app is currently focused on day-to-day tasks and is, at the moment, not meant to 'keep the tasks overnight'. The app focuses on helping users to accomplish achievable targets for the day and, hopefully, spurs the individual to focus solely on the tasks they absolutely need to complete on the day. On this note, I do have future plans to improve and expand this system, and it will be elaborated on in the Future Plans section at the end of this README document. 
 
 **Changing WallPaper**
 
+![Wallpaper Changing](/Media/ChangeWallpaper.gif "How to change wallpaper")
+
 **Task Management**
+
+![Task Management](/Media/TasksAddition.gif "Adding and Managing Tasks")
 
 **Weather and Lifestyle**
 
+![Weather](/Media/WeatherPage.gif "Weather Page")
+
+The weather page titled "#Skies" fetches information from the OpenWeatherMap API. 
+
+![Entertainment Page](/Media/EntertainmentLifestyle.gif "Entertainment Page")
 ### **Challenges Faced**
 blah blah
 
 (talk about how numbers API doesn't work due to CORS and the remedy didn't work)
-
-### **Improvements To Be Made**
+(CSS needs to be better and responsive to the webpage size)
+### **My Coding Experience**
 
 blah blah
-(CSS needs to be better and responsive to the webpage size)
 
-### **Future Plans For Expansion**
+
+### **Future Plans**
 
 blah blah
 

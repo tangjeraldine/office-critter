@@ -17,9 +17,11 @@ function GiveNumberTrivia() {
   };
 
   return (
-    <div className='card-body text-black bg-white max-w-72'>
-      <h2 className='card-title justify-center'>Feed Me A Number</h2>{" "}
-      <p className='font-mono font-bold justify-center'>{trivia}</p>
+    <div className='card-body text-black bg-white max-w-72 rounded-md'>
+      <h2 className='card-title justify-center'>
+        What's your lucky number today?
+      </h2>{" "}
+      <p className='font-mono font-bold text-2xl justify-center'>{trivia}</p>
       <input
         type='number'
         placeholder='Enter any number'

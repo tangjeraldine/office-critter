@@ -22,8 +22,8 @@ function TemperatureD2({ temp }) {
           <img src={sidePhoto} className='max-w-sm mask mask-pentagon' />
           <div>
             <div className='text-3xl font-bold font-serif'>
-              Play your activities by ear for tomorrow? The weather is hard to
-              divine.
+              Tomorrow's weather will probably be this. Drink more water to
+              hydrate if it's hot!
             </div>
             <br />
             <div className='text-2xl font-serif'>
