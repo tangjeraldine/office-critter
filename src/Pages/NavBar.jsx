@@ -5,8 +5,6 @@ import DateComponent from "./DateComponent";
 function NavBar({ wpTheme, setWpTheme, wp, setWP }) {
   const fetchWP = () => {
     const WPURL = `https://api.unsplash.com/photos/random?client_id=GdUVswihOUZQbPBprLpHirAHvbdsxnrRq_98puNbwCs&orientation=landscape&query=${wpTheme}`;
-    console.log(WPURL);
-
     fetch(WPURL)
       .then((response) => response.json())
       .then((data) => setWP(data?.urls?.raw));
@@ -52,7 +50,7 @@ function NavBar({ wpTheme, setWpTheme, wp, setWP }) {
           <Link to='/' class='btn btn-ghost normal-case text-xl'>
             {" "}
             <img
-              src='https://cdn-icons-png.flaticon.com/512/1584/1584961.png'
+              src='https://cdn-icons-png.flaticon.com/512/4727/4727424.png'
               className='h-12'
             />
           </Link>
