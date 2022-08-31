@@ -4,7 +4,7 @@ function LowPriority({ fourth, setFourth, fourthDone, setFourthDone }) {
     setFourthDone(fourthDone + 1);
   };
   const fourthPriorityList = fourth.map((item, index) => (
-    <div class='card w-60 bg-primary text-primary-content'>
+    <div class='card w-60 bg-slate-200 text-primary-content'>
       <div class='card-body'>
         <p>{item}</p>
         <div class='card-actions justify-end'>

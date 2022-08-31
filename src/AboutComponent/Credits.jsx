@@ -14,7 +14,7 @@ function CreditText() {
         organisations to maximise operational efficiency and stretching profits.
       </h3>
       <h3>This webpage was built using React and VSCode.</h3>
-      <h3>APIs: UnSplash. OpenWeatherMap. </h3>
+      <h3>APIs: UnSplash. OpenWeatherMap. The New York Times.</h3>
       <h3>Libraries: TailWind CSS. Daisy UI. Chart.js. </h3>
       <h3>
         <a href='https://git.generalassemb.ly/tangjeraldine-yp/react-millenial-zombie'>

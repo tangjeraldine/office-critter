@@ -10,8 +10,9 @@ function HowToText() {
         your tasks will be lost, so make sure to keep the page open!
       </h3>
       <h3 className='font-serif mb-5 text-2xl'>
-        Otherwise, click on the Brain Fart! tab to see some trivia, or ensure
-        that wet weather doesn't soil your plans under the #Skies tab.
+        Otherwise, click on the Brain Fart! tab to see what are The New York
+        Times' current Bestsellers, or ensure that wet weather doesn't soil your
+        plans under the #Skies tab.
       </h3>
     </div>
   );

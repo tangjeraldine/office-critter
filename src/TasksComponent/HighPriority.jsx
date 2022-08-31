@@ -5,7 +5,7 @@ function HighPriority({ highest, setHighest, highestDone, setHighestDone }) {
   };
 
   const highPriorityList = highest.map((item, index) => (
-    <div className='card w-60 bg-primary text-primary-content'>
+    <div className='card w-60 bg-red-200 text-primary-content'>
       <div className='card-body'>
         <p>{item}</p>
         <div className='card-actions justify-end'>

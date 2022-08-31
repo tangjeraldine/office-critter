@@ -108,7 +108,7 @@ function TaskReminder({ highest, second, third, fourth }) {
         <div></div>
       )}
       {fourth.length > 0 && hide4 === true ? (
-        <div class='alert shadow-lg'>
+        <div class='alert shadow-lg text-black'>
           <div>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -127,7 +127,7 @@ function TaskReminder({ highest, second, third, fourth }) {
             </span>
           </div>{" "}
           <button class='btn btn-sm btn-ghost' onClick={handleHide4}>
-            Ok, fine
+            Alright
           </button>
         </div>
       ) : (

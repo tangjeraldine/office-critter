@@ -13,13 +13,26 @@ function DateComponent() {
 
   const currentGMT = now.toGMTString().split(" "); // ['Sun,', '28', 'Aug', '2022', '16:08:07', 'GMT']]
   //   console.log(currentGMT);
-  const currentDay = currentGMT[0].split("");
+  let currentDay;
+  if (currentGMT[0] === "Mon") {
+    currentDay = "Monday";
+  } else if (currentGMT[0] === "Tue,") {
+    currentDay = "Tuesday";
+  } else if (currentGMT[0] === "Wed,") {
+    currentDay = "Wednesday";
+  } else if (currentGMT[0] === "Thu,") {
+    currentDay = "Thursday";
+  } else if (currentGMT[0] === "Fri,") {
+    currentDay = "Friday";
+  } else if (currentGMT[0] === "Sat,") {
+    currentDay = "Saturday";
+  } else if (currentGMT[0] === "Sun,") {
+    currentDay = "Thursday";
+  }
 
   return (
     <h3>
-      {currentDay[0]}
-      {currentDay[1]}
-      {currentDay[2]}day, {currentGMT[1]} {currentGMT[2]} {currentGMT[3]}
+      {currentDay}, {currentGMT[1]} {currentGMT[2]} {currentGMT[3]}
     </h3>
   );
 }

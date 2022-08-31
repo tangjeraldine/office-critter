@@ -4,8 +4,8 @@ function ImptNotUrgent({ second, setSecond, secondDone, setSecondDone }) {
     setSecondDone(secondDone + 1);
   };
   const secondPriorityList = second.map((item, index) => (
-    <div class='card w-60 bg-primary text-primary-content'>
-      <div class='card-body'>
+    <div class='card w-60 bg-slate-700 text-primary-content'>
+      <div class='card-body text-white'>
         <p>{item}</p>
         <div class='card-actions justify-end'>
           <button onClick={handleRemove(index)} class='btn'>

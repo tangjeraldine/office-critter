@@ -33,7 +33,7 @@ function TasksPage({
     <div className='max-w-8xl'>
       <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
       <br />
-      <h1 className='mb-5 text-3xl font-bold bg-black text-white'>
+      <h1 className='mb-8 text-3xl font-bold bg-black text-white rounded-md'>
         "Discipline is choosing between what you want now, and what you want
         most."
       </h1>
@@ -63,17 +63,17 @@ function TasksPage({
         setFourthDone={setFourthDone}
       />
       <br />
-      <div class='flex justify-center font-serif w-full py-2 gap-8'>
+      <div class='flex justify-center w-full py-2 gap-8'>
         <a href='#item1' className='btn btn-s bg-red-700 text-white'>
           ! Highest Priority
         </a>
-        <a href='#item2' className='btn btn-s bg-teal-600 text-white'>
+        <a href='#item2' className='btn btn-s bg-slate-800 text-white text-1xl'>
           Important, But Not Urgent
         </a>
-        <a href='#item3' className='btn btn-s bg-teal-400 text-black'>
+        <a href='#item3' className='btn btn-s bg-slate-500 text-white'>
           Not Important, But Urgent
         </a>
-        <a href='#item4' className='btn btn-s bg-teal-300 text-grey'>
+        <a href='#item4' className='btn btn-s bg-slate-200 text-black'>
           Lowest Priority
         </a>
       </div>

@@ -23,12 +23,12 @@ function WeatherPage({ wpTheme, setWpTheme, wp, setWP }) {
   // console.log(typeof temp);
 
   return (
-    <div className='text-emerald-900'>
+    <div className='text-emerald-900 '>
       <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
       <br />
-      <img className='w-screen' src='../Clouds_2.jpg' />
+      <img className='w-screen rounded-md' src='../Clouds_2.jpg' />
       <br />
-      <div className='carousel max-w-7xl'>
+      <div className='carousel max-w-7xl rounded-md'>
         <div id='item1' className='carousel-item w-full'>
           <TemperatureD1 temp={temp} />
         </div>

@@ -88,10 +88,10 @@ function ProductivityStats({
   return (
     <div>
       <label for='my-modal-4' class='btn modal-button'>
-        View Productivity Stats
+        Click to view completion status
       </label>
       <progress
-        className='progress w-56'
+        className='progress progress-warning w-64'
         value={totalDone}
         max={count}></progress>
       <input type='checkbox' id='my-modal-4' class='modal-toggle' />

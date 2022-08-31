@@ -46,8 +46,8 @@ function NavBar({ wpTheme, setWpTheme, wp, setWP }) {
   };
 
   return (
-    <div className='absolute top-0 sticky font-serif text-1xl text-black'>
-      <div class='navbar bg-base-100'>
+    <div className='absolute top-0 sticky font-serif text-1xl text-black '>
+      <div class='navbar bg-base-100 rounded-md'>
         <div class='navbar-start'>
           <Link to='/' class='btn btn-ghost normal-case text-xl'>
             {" "}
@@ -78,7 +78,7 @@ function NavBar({ wpTheme, setWpTheme, wp, setWP }) {
               <a>
                 Change My Wallpaper.
                 <svg
-                  class='fill-current'
+                  className='fill-current'
                   xmlns='http://www.w3.org/2000/svg'
                   width='20'
                   height='20'
@@ -86,7 +86,7 @@ function NavBar({ wpTheme, setWpTheme, wp, setWP }) {
                   <path d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' />
                 </svg>
               </a>
-              <ul class='p-2'>
+              <ul className='p-2 bg-white'>
                 <li>
                   <a onClick={handlePlants}>Plants</a>
                 </li>
