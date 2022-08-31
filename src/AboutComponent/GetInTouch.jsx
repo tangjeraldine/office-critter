@@ -16,6 +16,9 @@ function GetInTouch() {
       <br />
       <div className='flex flex-row grid-cols-4 space-x-6'>
         <div className='basis-1/4 md:basis-1/3'>
+          <PersonalInfoModal />
+        </div>
+        <div className='basis-1/4 md:basis-1/3'>
           <label className='label font-bold '>
             <span className='label-text text-1xl text-white font-serif'>
               Your Email
@@ -39,11 +42,9 @@ function GetInTouch() {
             className='input input-bordered text-1xl text-black font-serif'
           />
         </div>
-        <div className='basis-1/2 md:basis-1/3'>
+        <div className='basis-1/4 md:basis-1/3'>
           <SubmitInfoButton />
         </div>
-
-        <PersonalInfoModal />
       </div>
       <br />
       <br />

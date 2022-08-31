@@ -1,8 +1,8 @@
 function PersonalInfoModal() {
   return (
     <div className='text-black'>
-      <label className='text-white font-bold' for='my-modal-4'>
-        See: Confidentiality Policy
+      <label className='text-white font-bold underline' for='my-modal-4'>
+        Confidentiality Policy
       </label>
 
       <input type='checkbox' id='my-modal-4' class='modal-toggle' />

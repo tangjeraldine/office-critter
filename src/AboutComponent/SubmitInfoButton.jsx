@@ -1,7 +1,9 @@
 function SubmitInfoButton() {
   return (
     <div className='text-black bg-slate-700'>
-      <label className='text-white font-bold font-serif' for='my-modal-4'>
+      <label
+        className='text-white text-2xl font-bold font-serif'
+        for='my-modal-4'>
         Submit
       </label>
 
