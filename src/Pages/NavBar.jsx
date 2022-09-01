@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ClockComponent from "./ClockComponent";
 import DateComponent from "./DateComponent";
+import Lofi from "../Pages/Lofi.mp3";
 
 function NavBar({ wpTheme, setWpTheme, wp, setWP }) {
   const fetchWP = () => {

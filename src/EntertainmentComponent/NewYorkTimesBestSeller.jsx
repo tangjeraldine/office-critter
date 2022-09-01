@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 function NewYorkTimes() {
   const [NYbooks, setNYBooks] = useState({});
+
   const bestSellerURL =
     "https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=wQwUAQSOpGnnirdgJtwuaDRGxshyGSe1";
   useEffect(() => {
@@ -10,6 +11,7 @@ function NewYorkTimes() {
       .then((data) => setNYBooks(data.results?.books));
   }, []);
   // console.log(NYbooks[0].book_image);
+
   return (
     <div className='grid grid-cols-3 flex gap-5 '>
       <div className='max-w-56 max-h-80 text-black bg-base-300 hover:bg-base-100 rounded-md'>

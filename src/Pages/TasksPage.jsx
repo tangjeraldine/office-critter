@@ -4,7 +4,7 @@ import ImptNotUrgent from "../TasksComponent/ImptNotUrgt";
 import LowPriority from "../TasksComponent/LowPriority";
 import NotImptButUrgt from "../TasksComponent/NotImptButUrgt";
 import SelectPriority from "../TasksComponent/SelectPriority";
-import ProductivityStats from "../TasksComponent/ProductivityStats";
+
 import NavBar from "./NavBar";
 
 function TasksPage({
@@ -33,13 +33,6 @@ function TasksPage({
   return (
     <div className='max-w-8xl'>
       <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />
-      <br />
-      <h1 className='mb-8 text-3xl font-bold bg-black text-white rounded-md'>
-        "Discipline is choosing between what you want now, and what you want
-        most."
-      </h1>
-      <h3 className='mb-5 text-2xl font-bold text-white '>-Abraham Lincoln</h3>
-
       <br />
       <SelectPriority
         count={count}

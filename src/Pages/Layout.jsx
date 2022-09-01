@@ -9,7 +9,7 @@ function LayoutPage({ wp }) {
       style={{
         backgroundImage: `url(${wp})`,
       }}>
-      <div className='hero-overlay bg-opacity-40'></div>
+      <div className='hero-overlay bg-opacity-30'></div>
       <div className='text-center text-neutral-content h-screen w-10xl'>
         <div className='max-w-7xl'>
           <Outlet />
