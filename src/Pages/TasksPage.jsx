@@ -29,6 +29,7 @@ function TasksPage({
   const [secondDone, setSecondDone] = useState(0);
   const [thirdDone, setThirdDone] = useState(0);
   const [fourthDone, setFourthDone] = useState(0);
+
   return (
     <div className='max-w-8xl'>
       <NavBar wpTheme={wpTheme} setWpTheme={setWpTheme} wp={wp} setWP={setWP} />

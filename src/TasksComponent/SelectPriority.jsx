@@ -13,9 +13,13 @@ function SelectPriority({
   setFourth,
   text,
   setText,
+  setHighestDone,
   highestDone,
+  setSecondDone,
   secondDone,
+  setThirdDone,
   thirdDone,
+  setFourthDone,
   fourthDone,
 }) {
   const handleText = (e) => {
@@ -24,24 +28,40 @@ function SelectPriority({
   // console.log(typeof text);
 
   const handleHighest = () => {
-    setHighest([...highest, text]);
-    setCount(count + 1);
-    // console.log(highest);
+    if (text === "") {
+      alert("Key in something!");
+    } else {
+      setHighest([...highest, text]);
+      setCount(count + 1);
+      // console.log(highest);
+    }
   };
 
   const handleSecond = () => {
-    setSecond([...second, text]);
-    setCount(count + 1);
+    if (text === "") {
+      alert("Key in something!");
+    } else {
+      setSecond([...second, text]);
+      setCount(count + 1);
+    }
   };
 
   const handleThird = () => {
-    setThird([...third, text]);
-    setCount(count + 1);
+    if (text === "") {
+      alert("Key in something!");
+    } else {
+      setThird([...third, text]);
+      setCount(count + 1);
+    }
   };
 
   const handleFourth = () => {
-    setFourth([...fourth, text]);
-    setCount(count + 1);
+    if (text === "") {
+      alert("Key in something!");
+    } else {
+      setFourth([...fourth, text]);
+      setCount(count + 1);
+    }
   };
 
   return (
@@ -76,14 +96,23 @@ function SelectPriority({
       </div>
       <br />
       <ProductivityStats
+        setHighest={setHighest}
         highest={highest}
+        setSecond={setSecond}
         second={second}
+        setThird={setThird}
         third={third}
+        setFourth={setFourth}
         fourth={fourth}
+        setCount={setCount}
         count={count}
+        setHighestDone={setHighestDone}
         highestDone={highestDone}
+        setSecondDone={setSecondDone}
         secondDone={secondDone}
+        setThirdDone={setThirdDone}
         thirdDone={thirdDone}
+        setFourthDone={setFourthDone}
         fourthDone={fourthDone}
       />
     </div>

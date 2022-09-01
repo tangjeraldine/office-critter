@@ -16,6 +16,7 @@ function GetInTouch() {
       <br />
       <div className='flex flex-row grid-cols-4 space-x-6'>
         <div className='basis-1/4 md:basis-1/3'>
+          {" "}
           <PersonalInfoModal />
         </div>
         <div className='basis-1/4 md:basis-1/3'>
@@ -47,14 +48,9 @@ function GetInTouch() {
         </div>
       </div>
       <br />
-      <br />
       <h3 className='text-sm'>
         This webpage was built using React Vite and VSCode.
       </h3>
-      <h3 className='text-sm'>
-        APIs: UnSplash. OpenWeatherMap. The New York Times.
-      </h3>
-      <h3 className='text-sm'>Libraries: TailWind CSS. Daisy UI. Chart.js. </h3>
       <h3 className='text-sm text-white'>
         <a href='https://github.com/tangjeraldine/react-office-critter-app'>
           Visit my GitHub Repo for this website.

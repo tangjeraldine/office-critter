@@ -12,7 +12,7 @@ function NewYorkTimes() {
   // console.log(NYbooks[0].book_image);
   return (
     <div className='grid grid-cols-3 flex gap-5 '>
-      <div className='max-w-56 max-h-72 text-black bg-base-300 hover:bg-base-100 rounded-md'>
+      <div className='max-w-56 max-h-80 text-black bg-base-300 hover:bg-base-100 rounded-md'>
         <div className='grid grid-cols-2'>
           <img
             className='max-h-52 rounded-md'
@@ -22,7 +22,9 @@ function NewYorkTimes() {
           <div className='margin-auto'>
             <h2 class='font-bold text-2xl'>
               <div class='badge badge-secondary'>1st!</div>
-              {NYbooks?.[0]?.title}
+              <a href={NYbooks?.[0]?.buy_links?.[0]?.url} target='_blank'>
+                {NYbooks?.[0]?.title}
+              </a>
             </h2>
             <p>{NYbooks?.[0]?.description}</p>
           </div>
@@ -32,7 +34,7 @@ function NewYorkTimes() {
           Publisher: {NYbooks?.[0]?.publisher}
         </div>
       </div>
-      <div className='max-w-56 max-h-72 text-black bg-base-300 hover:bg-base-100 rounded-md'>
+      <div className='max-w-56 max-h-80 text-black bg-base-300 hover:bg-base-100 rounded-md'>
         <div className='grid grid-cols-2'>
           <img
             className='max-h-52 rounded-md'
@@ -42,7 +44,9 @@ function NewYorkTimes() {
           <div className='margin-auto'>
             <h2 class='font-bold text-2xl'>
               <div class='badge badge-secondary'>2nd</div>
-              {NYbooks?.[1]?.title}
+              <a href={NYbooks?.[1]?.buy_links?.[1]?.url} target='_blank'>
+                {NYbooks?.[1]?.title}
+              </a>
             </h2>
             <p>{NYbooks?.[1]?.description}</p>
           </div>
@@ -52,7 +56,7 @@ function NewYorkTimes() {
           Publisher: {NYbooks?.[1]?.publisher}
         </div>
       </div>
-      <div className='max-w-56 max-h-72 text-black bg-base-300 hover:bg-base-100 rounded-md'>
+      <div className='max-w-56 max-h-80 text-black bg-base-300 hover:bg-base-100 rounded-md'>
         <div className='grid grid-cols-2'>
           <img
             className='max-h-52 rounded-md'
@@ -62,7 +66,9 @@ function NewYorkTimes() {
           <div className='margin-auto'>
             <h2 class='font-bold text-2xl'>
               <div class='badge badge-secondary'>3rd</div>
-              {NYbooks?.[2]?.title}
+              <a href={NYbooks?.[2]?.buy_links?.[2]?.url} target='_blank'>
+                {NYbooks?.[2]?.title}
+              </a>
             </h2>
             <p>{NYbooks?.[2]?.description}</p>
           </div>
