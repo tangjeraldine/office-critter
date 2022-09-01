@@ -77,8 +77,8 @@ function SelectPriority({
     <div>
       <div className='grid grid-cols-3 gap-2 flex items-center'>
         <img
-          onClick={handleMusic}
-          onDoubleClick={stopMusic}
+          onMouseOver={handleMusic}
+          onMouseOut={stopMusic}
           src={lofi_generator}
           className='rounded-md h-48  float-right col-span-1 cursor-pointer'
         />
@@ -86,7 +86,7 @@ function SelectPriority({
           <textarea
             onChange={handleText}
             className='textarea textarea-info text-teal-700 text-2xl font-serif max-w-full'
-            placeholder='Add task to begin! Click lofi girl once to play audio, double click to stop.'></textarea>
+            placeholder='Add task to begin! To chill out, place your mouse over lofi girl to play audio.'></textarea>
           <div className='dropdown dropdown-bottom '>
             <label tabindex='0' class='btn btn-black w-72'>
               How important is it?
